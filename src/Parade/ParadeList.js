@@ -4,7 +4,7 @@ export default function ParadeList({ swims }) {
   return (
     <div className='lineUp'>
       {
-        swims.map((swim, i) => <Parade swimming={swim} key={swim + i} />)
+        swims.map((swim, i) => <Parade swim={swim} key={swim + i} />)
       }
     </div>
   );

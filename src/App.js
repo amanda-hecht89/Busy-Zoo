@@ -27,7 +27,7 @@ function App() {
     swims.push('nigel');
     setSwims(swims.slice());
   }
-  
+
   function handleMineClick() {
     swims.push('mine');
     setSwims(swims.slice());
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <heaader>Welcome to my App!</heaader>
+      <header>Welcome to my App!</header>
       <div className="darlaFight">
         <div className='fishie'>
           <img src="./images/nemo1.png" width={nemoSize}></img>
@@ -60,13 +60,13 @@ function App() {
         </div>
       </div>
       <div className='reefDentist'></div>
-      <ParadeList swim={swims} />
+      <ParadeList swims={swims} />
       <div className='buttons'>
-        <button onClick={handleDoryClick}>Dory</button>
-        <button onClick={handleMarlinClick}>Marlin</button>
-        <button onClick={handleBruceClick}>Bruce</button>
-        <button onClick={handleNigelClick}>Nigel</button>
-        <button onClick={handleMineClick}>MINE!</button>
+        <button onClick={() => handleDoryClick('dory')}>Dory</button>
+        <button onClick={() => handleMarlinClick('marlin')}>Marlin</button>
+        <button onClick={() => handleBruceClick('bruce')}>Bruce</button>
+        <button onClick={() => handleNigelClick('nigel')}>Nigel</button>
+        <button onClick={() => handleMineClick('mine')}>MINE!</button>
       </div>
     </div>
   );
