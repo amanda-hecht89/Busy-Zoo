@@ -51,7 +51,7 @@ function App() {
             <button onClick={() => setDarlaSize(darlaSize - 3)}>Get Caught</button>
           </div>
         </div>
-        <div className='fishie'>
+        <div className='darla'>
           <img src="./images/darla2.png" width={darlaSize}></img>
           <div className='button'>
             <button onClick={() => setDarlaSize(darlaSize + 3)}>FISHIE!!!!!!</button>
@@ -62,7 +62,7 @@ function App() {
       </div>
       <div className='ocean'>
         <Toggle reefDentist={reefDentist} />
-        <button onClick={() => setReefDentist(!reefDentist)}>Where are We?!?</button>
+        <button onClick={() => setReefDentist(!reefDentist)}>{reefDentist ? 'WHERES NEMO?' : 'THERES NEMO!'}</button>
       </div>
       <hr />
       <ParadeList swims={swims} />

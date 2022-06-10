@@ -1,7 +1,7 @@
 import './Toggle.css';
 
 export default function reefDentist({ reefDentist }) {
-  return <div className="{reefDentist ? 'reef' : 'dentist'}">
+  return <div className="{reefDentist ? 'reef' : 'dentist'} ">
     {
       reefDentist
         ? <img src="./images/reef.jpg" width='300px'></img>
