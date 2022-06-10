@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import ParadeList from './Parade/ParadeList';
+import Toggle from './Toggle/Toggle';
 
 function App() {
 
@@ -67,7 +68,8 @@ function App() {
         <hr />
       </div>
       <div className='ocean'>
-        <Toggle />
+        <Toggle reefDentist={reefDentist} />
+        <button onClick={() => setReefDentist(!reefDentist)}>Where are We?!?</button>
       </div>
       <hr />
       <ParadeList swims={swims} />
