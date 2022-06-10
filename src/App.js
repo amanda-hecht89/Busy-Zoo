@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 function App() {
 
-  const [nemoSize, setNemoSize] = useState(20);
-  const [darlaSize, setDarlaSize] = useState(20);
+  const [nemoSize, setNemoSize] = useState(100);
+  const [darlaSize, setDarlaSize] = useState(100);
 
 
 
@@ -18,17 +18,17 @@ function App() {
       <heaader>Welcome to my App!</heaader>
       <div className="ocean">
         <div className='fishie'>
-          <img src="darla2.png" width={darlaSize}></img>
+          <img src="./images/nemo1.png" width={nemoSize}></img>
           <div className='button'>
-            <button onClick={() => setNemoSize(nemoSize + 10)}>Settle Bag</button>
-            <button onClick={() => setDarlaSize(nemoSize - 10)}>Shake Bag</button>
+            <button onClick={() => setNemoSize(nemoSize + 1)}>Settle Bag</button>
+            <button onClick={() => setDarlaSize(nemoSize - 1)}>Shake Bag</button>
           </div>
         </div>
         <div className='fishie'>
-          <img src="nemo1.png" width={nemoSize}></img>
+          <img src="./images/darla2.png" width={darlaSize}></img>
           <div className='button'>
-            <button onClick={() => setDarlaSize(darlaSize + 10)}>Shake Bag</button>
-            <button onClick={() => setNemoSize(darlaSize - 10)}>Get Caught</button>
+            <button onClick={() => setDarlaSize(darlaSize + 1)}>Shake Bag</button>
+            <button onClick={() => setNemoSize(darlaSize - 1)}>Get Caught</button>
           </div>
         </div>
       </div>
