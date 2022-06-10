@@ -40,13 +40,6 @@ function App() {
     setSwims(swims.slice());
   }
 
-
-
-
-
-
-
-
   return (
     <div className="App">
       <header>Welcome to my App!</header>
