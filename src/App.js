@@ -7,6 +7,7 @@ function App() {
   const [nemoSize, setNemoSize] = useState(100);
   const [darlaSize, setDarlaSize] = useState(100);
   const [swims, setSwims] = useState(['dory', 'marlin', 'bruce', 'nigel', 'mine']);
+  const [reefDentist, setReefDentist] = useState(true);
 
   function handleBruceClick() {
     swims.push('bruce');
@@ -30,6 +31,11 @@ function App() {
 
   function handleMineClick() {
     swims.push('mine');
+    setSwims(swims.slice());
+  }
+
+  function handleBackButton() {
+    swims.pop();
     setSwims(swims.slice());
   }
 
@@ -58,8 +64,12 @@ function App() {
             <button onClick={() => setNemoSize(nemoSize - 3)}>Shake Bag</button>
           </div>
         </div>
+        <hr />
       </div>
-      <div className='reefDentist'></div>
+      <div className='reefDentist'>
+        <Toggle />
+      </div>
+      <hr />
       <ParadeList swims={swims} />
       <div className='buttons'>
         <button onClick={() => handleDoryClick('dory')}>Dory</button>
@@ -67,6 +77,8 @@ function App() {
         <button onClick={() => handleBruceClick('bruce')}>Bruce</button>
         <button onClick={() => handleNigelClick('nigel')}>Nigel</button>
         <button onClick={() => handleMineClick('mine')}>MINE!</button>
+        <button onClick={handleBackButton}>Stop Looking</button>
+
       </div>
     </div>
   );
