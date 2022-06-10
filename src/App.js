@@ -66,7 +66,7 @@ function App() {
         </div>
         <hr />
       </div>
-      <div className='reefDentist'>
+      <div className='ocean'>
         <Toggle />
       </div>
       <hr />
