@@ -1,0 +1,15 @@
+.swim {
+
+    display: flex;
+    border: 3px solid rgb(61, 61, 88);
+    padding: 10px;
+    
+}
+
+.lineUp {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    background-color: rgba(61, 61, 88, 0.484);
+}
+
