@@ -1,13 +1,12 @@
 import { screen } from '@testing-library/react';
 const { render } = require('@testing-library/react');
+import App from './App';
 
-test('if user clicks on the marlin button, marlin should be added to the screen', () => {
+test('marlin should be added to the screen when loaded', () => {
   render(<App />);
-  const marlinButton = screen.getAllByAltText(
-    text: TextMatch,
-    options?: {
-      exact?: boolean = true,
-      normalizer?: NormalizerFn,
-    }): HTMLElement
-  )
+  const marlinImage = screen.getByAltText(
+    'marlin',
+  );
+  expect(marlinImage).toBeInTheDocument();
+
 });
