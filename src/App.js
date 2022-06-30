@@ -67,7 +67,7 @@ function App() {
       <hr />
       <ParadeList swims={swims} />
       <div className='buttons'>
-        <button onClick={() => handleDoryClick('dory')}>Dory</button>
+        <button alt='Dory' onClick={() => handleDoryClick('dory')}>Dory</button>
         <button onClick={() => handleMarlinClick('marlin')}>Marlin</button>
         <button onClick={() => handleBruceClick('bruce')}>Bruce</button>
         <button onClick={() => handleNigelClick('nigel')}>Nigel</button>

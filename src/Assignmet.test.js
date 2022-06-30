@@ -22,14 +22,14 @@ test('there should be a greeting on page', () => {
 test('if user clicks dory, then dory appears on screen at end of parade', () => {
   render(<App/>);
 
-  const doryParade = screen.getAllByAltText('dory', 'marlin', 'bruce', 'nigel', 'mine');
-  expect(doryParade.length).toBe(1);
-
-  const doryButton = screen.getByAltText(/dory/i);
+  const doryParade = screen.getAllByAltText(/dory|marlin|bruce|nigel|mine/i);
+  expect(doryParade.length).toBe(5);
+  const doryButton = screen.getByText(/Dory/i);
+  console.log(doryButton);
   fireEvent.click(doryButton);
 
-  const doryAfterClick = screen.getAllByAltText('dory', 'marlin', 'bruce', 'nigel', 'mine');
-  expect(doryAfterClick.length).toBe(1);
+  const doryAfterClick = screen.getAllByAltText(/dory|marlin|bruce|nigel|mine/i);
+  expect(doryAfterClick.length).toBe(6);
 });
 
 
@@ -38,7 +38,7 @@ test('if user clicks on the reef, it takes you to the dentist', () => {
   const wheresNemo = screen.getByAltText('reef');
   expect(wheresNemo).toBeInTheDocument();
 
-  const switchButton = screen.getByAltText(/reef/i);
+  const switchButton = screen.getByText(/WHERES NEMO?/i);
   fireEvent.click(switchButton);
 
   const theresNemo = screen.getByAltText('dentist');
