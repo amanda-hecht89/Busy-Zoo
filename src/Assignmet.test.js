@@ -25,7 +25,6 @@ test('if user clicks dory, then dory appears on screen at end of parade', () => 
   const doryParade = screen.getAllByAltText(/dory|marlin|bruce|nigel|mine/i);
   expect(doryParade.length).toBe(5);
   const doryButton = screen.getByText(/Dory/i);
-  console.log(doryButton);
   fireEvent.click(doryButton);
 
   const doryAfterClick = screen.getAllByAltText(/dory|marlin|bruce|nigel|mine/i);
