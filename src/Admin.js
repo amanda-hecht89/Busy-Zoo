@@ -12,7 +12,7 @@ const countMap = Customers.reduce((acc, curr) => {
 }, {});
 
 const chartData = Object.keys(countMap).map(key => ({
-    pet_type: key, count: countMap[key]
+  pet_type: key, count: countMap[key]
 }));
 
 
