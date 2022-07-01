@@ -2,22 +2,23 @@ import './App.css';
 import FindingNemo from './FindingNemo';
 import Admin from './Admin';
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Link,
 } from 'react-router-dom';
 
 
 export function App() {
   return (
-    <BrowserRouter className="App">
+    <Router className="App">
+      <Link to="/admin">Admin
+      </Link>
       <Routes>
         <Route path='/' element={<FindingNemo/>}>NEMO</Route>
         <Route path='/admin' element={<Admin/>}>ADMIN</Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
 export default App;
-
