@@ -1,4 +1,3 @@
-//import { Customers } from './data';
 import React from 'react';
 import { VictoryChart, VictoryAxis, VictoryLine } from 'victory';
 
