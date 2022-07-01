@@ -37,3 +37,7 @@
   align-items: center;
   background-color: rgba(61, 61, 88, 0.484);
 }
+
+.chartOne {
+  height: 300px;
+}
