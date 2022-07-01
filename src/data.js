@@ -1,4 +1,4 @@
-export const customers = [
+export const Customers = [
   [{ 'id':1, 'first_name':'Olive', 'last_name':'Gorwood', 'pet_type':'Golden brush-tailed possum', 'pet_name':'Switchable object-oriented functionalities' },
     { 'id':2, 'first_name':'Bronnie', 'last_name':'Exposito', 'pet_type':'Swan, trumpeter', 'pet_name':'Intuitive optimizing synergy' },
     { 'id':3, 'first_name':'Jackelyn', 'last_name':'Hallyburton', 'pet_type':'Gecko, tokay', 'pet_name':'Fundamental bi-directional encryption' },
