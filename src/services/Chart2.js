@@ -2,7 +2,8 @@ import { Customers } from './data';
 import { VictoryChart, VictoryBar } from 'victory';
 
 
-const importedData = Customers.reduce((acc, curr) => {
+const Map = Customers.reduce((acc, curr) => {
+
   if (acc[curr.favorite_color]) {
     acc[curr.favorite_color]++;
   } else {
@@ -10,12 +11,15 @@ const importedData = Customers.reduce((acc, curr) => {
   }
   return acc;
 }, {});
-  
+
+const data = Object.keys(Map).map(key => ({
+  favorite_color: key, count: Map[key]
+}));
 export default function MyChart2() {
   return (
     <div className='chartTwo'>
       <VictoryChart domainPadding={25}>
-        <VictoryBar data={importedData} x="favorite_color" y="count"/>
+        <VictoryBar horizontal style={{ data: { fill: '#c43a31' } }} data={data} x='favorite_color' y="count"/>
       </VictoryChart>
     </div>
   );
