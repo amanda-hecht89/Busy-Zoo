@@ -14,6 +14,7 @@ export function App() {
     <Router className="App">
       <Link to="/admin">Admin
       </Link>
+
       <Routes>
         <Route path='/' element={<FindingNemo/>}>NEMO</Route>
         <Route path='/admin' element={<Admin/>}>ADMIN</Route>
