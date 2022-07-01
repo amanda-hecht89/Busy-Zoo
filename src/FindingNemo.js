@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import ParadeList from './Parade/ParadeList';
 import Toggle from './Toggle/Toggle';
+import CustomButton from './CustomButton';
 
 function FindingNemo() {
 
@@ -47,32 +48,32 @@ function FindingNemo() {
         <div className='fishie'>
           <img src="./images/nemo1.png" width={nemoSize}></img>
           <div className='button'>
-            <button onClick={() => setNemoSize(nemoSize + 3)}>Settle Bag</button>
-            <button onClick={() => setDarlaSize(darlaSize - 3)}>Get Caught</button>
+            <CustomButton onClick={() => setNemoSize(nemoSize + 3)}>Settle Bag</CustomButton>
+            <CustomButton onClick={() => setDarlaSize(darlaSize - 3)}>Get Caught</CustomButton>
           </div>
         </div>
         <div className='darla'>
           <img src="./images/darla2.png" width={darlaSize}></img>
           <div className='button'>
-            <button onClick={() => setDarlaSize(darlaSize + 3)}>FISHIE!!!!!!</button>
-            <button onClick={() => setNemoSize(nemoSize - 3)}>Shake Bag</button>
+            <CustomButton onClick={() => setDarlaSize(darlaSize + 3)}>FISHIE!!!!!!</CustomButton>
+            <CustomButton onClick={() => setNemoSize(nemoSize - 3)}>Shake Bag</CustomButton>
           </div>
         </div>
         <hr />
       </div>
       <div className='ocean'>
         <Toggle reefDentist={reefDentist} />
-        <button onClick={() => setReefDentist(!reefDentist)}>{reefDentist ? 'WHERES NEMO?' : 'THERES NEMO!'}</button>
+        <CustomButton onClick={() => setReefDentist(!reefDentist)}>{reefDentist ? 'WHERES NEMO?' : 'THERES NEMO!'}</CustomButton>
       </div>
       <hr />
       <ParadeList swims={swims} />
       <div className='buttons'>
-        <button alt='Dory' onClick={() => handleDoryClick('dory')}>Dory</button>
-        <button onClick={() => handleMarlinClick('marlin')}>Marlin</button>
-        <button onClick={() => handleBruceClick('bruce')}>Bruce</button>
-        <button onClick={() => handleNigelClick('nigel')}>Nigel</button>
-        <button onClick={() => handleMineClick('mine')}>MINE!</button>
-        <button onClick={handleBackButton}>Stop Looking</button>
+        <CustomButton alt='Dory' onClick={() => handleDoryClick('dory')}>Dory</CustomButton>
+        <CustomButton onClick={() => handleMarlinClick('marlin')}>Marlin</CustomButton>
+        <CustomButton onClick={() => handleBruceClick('bruce')}>Bruce</CustomButton>
+        <CustomButton onClick={() => handleNigelClick('nigel')}>Nigel</CustomButton>
+        <CustomButton onClick={() => handleMineClick('mine')}>MINE!</CustomButton>
+        <CustomButton onClick={handleBackButton}>Stop Looking</CustomButton>
 
       </div>
     </div>
